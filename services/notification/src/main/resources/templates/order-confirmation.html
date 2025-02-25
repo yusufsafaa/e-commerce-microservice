@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Order Confirmation</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        .container { max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; }
+        .header { background: #2196F3; color: white; padding: 10px; text-align: center; }
+        .content { padding: 20px; }
+        .footer { text-align: center; margin-top: 20px; color: #888; }
+        .product-list { margin-top: 15px; }
+        .product-list li { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h2>Order Confirmation</h2>
+    </div>
+    <div class="content">
+        <p>Dear <strong><span th:text="${customerName}"></span></strong>,</p>
+        <p>Thank you for your order. Your order has been successfully placed with the following details:</p>
+        <p>Order Reference: <strong><span th:text="${orderReference}"></span></strong></p>
+        <p>Order Amount: <strong><span th:text="${totalAmount}"></span></strong></p>
+        <h3>Products:</h3>
+        <ul class="product-list">
+            <span th:text="${products}"></span>
+        </ul>
+        <p>We appreciate your business and hope to serve you again soon.</p>
+    </div>
+    <div class="footer">
+        <p>&copy; 2025 Yusuf Safa Köksal. All rights reserved.</p>
+    </div>
+</div>
+</body>
+</html>

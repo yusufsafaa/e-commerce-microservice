@@ -1,0 +1,39 @@
+spring:
+  data:
+    mongodb:
+      username: admin
+      password: "123456"
+      host: localhost
+      port: 27017
+      database: customer
+      authentication-database: admin
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: user
+    password: 123456
+  mail:
+    host: localhost
+    port: 1025
+    username: yusufsafa
+    password: 123456
+    properties:
+      mail:
+        smtp:
+          trust: "*"
+        auth: true
+        starttls:
+          enable: true
+        connection:
+          timeout: 5000
+        timeout: 3000
+        write:
+          timeout: 5000
+
+rabbitmq:
+  queue:
+    payment-success: "payment-notification-queue"
+    order-success: "order-notification-queue"
+
+server:
+  port: 8040
